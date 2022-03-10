@@ -2,12 +2,15 @@ defmodule ExApi.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias ExApi.User.Conversion
+
   @primary_key {:id, Ecto.UUID, autogenerate: true}
 
   schema "users" do
     field :name, :string
     field :password_hash, :string
     field :password, :string, virtual: true
+    has_many(:conversion, Conversion)
     timestamps()
   end
 

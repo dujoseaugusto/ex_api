@@ -25,7 +25,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
   mix ecto.create
 
-  mix ecto.gen.migration create_trainer_table
+  mix ecto.gen.migration create_conversion_table
   mix ecto.migrate
   mix deps.get
 

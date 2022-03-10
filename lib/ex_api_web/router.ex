@@ -9,6 +9,8 @@ defmodule ExApiWeb.Router do
     pipe_through :api
 
     resources "/users", UsersController, only: [:create, :show, :delete, :update]
+    post "/conversion", ConversionController, :show
+
   end
 
   # Enables LiveDashboard only for development
