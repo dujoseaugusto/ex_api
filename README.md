@@ -22,11 +22,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   docker-compose build
 
   docker-compose up -d
-
+  
+  mix deps.get
+  
   mix ecto.create
 
-  mix ecto.gen.migration create_conversion_table
   mix ecto.migrate
-  mix deps.get
-
-  mix phx.routes
